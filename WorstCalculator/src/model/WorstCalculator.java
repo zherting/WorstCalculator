@@ -35,5 +35,4 @@ public class WorstCalculator {
 		int sum = number1 + number2;
 		return sum;
 	}
-
 }

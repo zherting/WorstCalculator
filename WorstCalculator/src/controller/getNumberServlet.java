@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.WorstCalculator;
-
 /**
  * Servlet implementation class getNumberServlet
  */
@@ -34,12 +32,8 @@ public class getNumberServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String number1 = request.getParameter("number1");
-		String number2 = request.getParameter("number2");
-		WorstCalculator numbers = new WorstCalculator(Integer.parseInt(number1), Integer.parseInt(number2));
-
-		request.setAttribute("numberResult", numbers);
-		getServletContext().getRequestDispatcher("/result.jsp").forward(request, response);
-
+		
+		request.setAttribute("number1", number1);
+		getServletContext().getRequestDispatcher("/index2.jsp").forward(request, response);
 	}
-
 }

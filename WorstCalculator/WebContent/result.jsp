@@ -9,8 +9,9 @@
 </head>
 <body>
 	<p>
-		First number: ${numberResult.getNumber1()} <br /> Second number:
-		${numberResult.getNumber2()} <br /> Sum: ${numberResult.sum() } <br />
+		First number: ${numberForCalculate.getNumber1()} <br /> Second
+		number: ${numberForCalculate.getNumber2()} <br /> Sum:
+		${numberForCalculate.sum() } <br />
 	</p>
 	<a href="index.jsp">Provide another number for calculation </a>
 </body>
