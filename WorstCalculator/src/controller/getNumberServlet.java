@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class getNumberServlet
@@ -32,8 +33,10 @@ public class getNumberServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String number1 = request.getParameter("number1");
-		
-		request.setAttribute("number1", number1);
+
+		HttpSession session = request.getSession();
+		session.setAttribute("number1", number1);
+
 		getServletContext().getRequestDispatcher("/index2.jsp").forward(request, response);
 	}
 }
